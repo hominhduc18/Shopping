@@ -38,7 +38,23 @@ h5 {
 h6 {
   color: #4a4848;
 }
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
 
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+body {
+  width: 100%;
+}
 hr {
   width: 30px;
   height: 2px;
@@ -51,6 +67,10 @@ hr {
   justify-content:space-between; /* nhảy hết qua phải  */
   padding: 20px 80px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 #narbar{
   display: flex;/* chuyển hàng ngang thành hàng dọc*/
@@ -73,7 +93,8 @@ hr {
 #narbar li a.active{/* khi tới mấy dòng chữ nó đổi màu, tác động tới home*/
   color: #088187;
 }
-#narbar li a.active::after{/* xử lý sau khi đổi mày chữ home*/
+#narbar li a.active::after,
+#narbar li a:hover:after{/* xử lý sau khi đổi mày chữ home*/
   content: "";
   width: 30%;
   height: 2px;
@@ -81,4 +102,67 @@ hr {
   position: absolute;
   bottom: -4px;
   left: 20px;
+}
+#hero{
+  background-image: url("img/hero4.png");
+  /* chỉnh kích thước cở ảnh*/
+  height:90vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 25% right 0;
+  padding: 0px 80px;
+  display: flex;
+  /* chuyển thành cột colum nằm giữa*/
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+#hero h4{
+  padding-bottom: 15px;
+}
+#hero h1{
+  color: #088187
+}
+#hero button{
+  background-image:url("img/button.png");
+  background-color: transparent;
+  color: #088187;
+  border: 0;/* bot viền quanh button*/
+  padding:14px 80px 14px 65px;/* mau mè cho để button*/
+  background-repeat: no-repeat; 
+  cursor: pointer;/* kiểu chuột khi trot tới*/
+  font-weight: 700;
+  font: size 15px;
+}
+#feature {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;/* betwwen là trải đều , còn center là chỉ ở giưuã */
+  flex-wrap: wrap;
+}
+
+#feature .fe-box{
+  width: 180px;
+  text-align: center;
+  padding: 25px 15px;
+  box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+  border: 1px solid #cee7d0;
+  border-radius: 4px;
+  margin: 15px 0;
+
+}
+
+#feature .fe-box:hover{
+  box-shadow: 10px 10px 54px rgba(70,62,221,0.1);
+}#feature .fe-box img{
+  width: 100%;
+  margin-bottom: 10px;
+}
+#feature .fe-box h6{
+  display: inline-block;
+  padding:9px 8px 6px 8px;
+  line-height:1;
+  border-radius: 4px;
+  color:#088187;
+  background-color: #fddde4;
 }
