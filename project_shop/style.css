@@ -36,11 +36,49 @@ h5 {
 }
 
 h6 {
-  color: #d8d8d8;
+  color: #4a4848;
 }
 
 hr {
   width: 30px;
   height: 2px;
   background-color: #fb774b;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content:space-between; /* nhảy hết qua phải  */
+  padding: 20px 80px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+}
+#narbar{
+  display: flex;/* chuyển hàng ngang thành hàng dọc*/
+  align-self: center; 
+  justify-content: center;
+}
+#narbar li { /* narbar tác động lên thẻ li*/
+  list-style: none;/* loại bỏ dấu chấm đầu mỗi chữ*/
+  padding: 0 20px;/* khoảng cách giữa các thẻ li*/
+
+}
+#narbar li a{
+  text-decoration: none; /* bỏ dấu gạch chân*/
+  font-size: 16px;
+  font-weight:600; /* độ to đậm của chữ*/
+  color: #1a1a1a;
+  transition: 0.3s ease;/* tốc độ đổi màu chữ*/
+}
+#narbar li a:hover,
+#narbar li a.active{/* khi tới mấy dòng chữ nó đổi màu, tác động tới home*/
+  color: #088187;
+}
+#narbar li a.active::after{/* xử lý sau khi đổi mày chữ home*/
+  content: "";
+  width: 30%;
+  height: 2px;
+  background:#088187;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
 }
